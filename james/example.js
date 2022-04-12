@@ -23,3 +23,5 @@ const add = (x,y) => {
      console.log('test failed')
  }
  
+let two = add('1', '1')
+console.log(two)
