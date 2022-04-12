@@ -1,11 +1,26 @@
 
 const add = (x,y) => {
+    if(typeof x ==='string'){
+       x = parseInt(x)
+    }
+    if(typeof y ==='string'){
+        y = parseInt(y)
+     }
+ 
     return x + y
  }
  
  const testAdd = () => {
-     // asum all test passed
+     // assum all test passed
      let passed = true
+     if(add('1','1') !== 2){
+        console.log('failed at add("1","1") !== 2')
+        passed = false
+    }
+    if(add('1', 1) !== 2){
+        console.log('failed at add("1","1") !== 2')
+        passed = false
+    }
      if(add(1,1) !== 2){
          console.log('failed at add(1,1) !== 2')
          passed = false
